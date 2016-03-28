@@ -15,6 +15,12 @@ public class Parser {
 	}
 	
 	
+	
+	/* Proceed to the evaluation of a mathematical expression expressed as a string.
+	 * 
+	 * @param expression - mathematical expression to evaluate.
+	 * @return evaluated value as a double.
+	 */	
 	public double parse(String expression) throws MathException {
 		
 		// Prepare the scanner.
@@ -28,6 +34,12 @@ public class Parser {
 	}
 	
 	
+	
+	/* Convert a mathematical expression from infix to postfix. 
+	 * 
+	 * @param expression - mathematical expression using infix notation.
+	 * @return queue bearing tokenized mathematical elements sorted according to the postfix notation.
+	 */
 	
 	private Queue<Token> prepare(String expression) throws MathException {
 		
@@ -148,6 +160,12 @@ public class Parser {
 	}
 	
 	
+	
+	/* Proceed to the proper evaluation of a postfix mathematical expression.
+	 * 
+	 * @inputQueue - queue bearing mathematical elements sorted according to the postfix notation.
+	 * @return evaluated value.
+	 */
 	private double evaluate(Queue<Token> inputQueue) throws MathException {
 		
 		Stack<Token> stack = new Stack<Token>();
